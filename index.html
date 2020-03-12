@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<svg style="display: none;">
+    <symbol id="svg-like">
+        <path d="m471.382812 44.578125c-26.503906-28.746094-62.871093-44.578125-102.410156-44.578125-29.554687 0-56.621094 9.34375-80.449218 27.769531-12.023438 9.300781-22.917969 20.679688-32.523438 33.960938-9.601562-13.277344-20.5-24.660157-32.527344-33.960938-23.824218-18.425781-50.890625-27.769531-80.445312-27.769531-39.539063 0-75.910156 15.832031-102.414063 44.578125-26.1875 28.410156-40.613281 67.222656-40.613281 109.292969 0 43.300781 16.136719 82.9375 50.78125 124.742187 30.992188 37.394531 75.535156 75.355469 127.117188 119.3125 17.613281 15.011719 37.578124 32.027344 58.308593 50.152344 5.476563 4.796875 12.503907 7.4375 19.792969 7.4375 7.285156 0 14.316406-2.640625 19.785156-7.429687 20.730469-18.128907 40.707032-35.152344 58.328125-50.171876 51.574219-43.949218 96.117188-81.90625 127.109375-119.304687 34.644532-41.800781 50.777344-81.4375 50.777344-124.742187 0-42.066407-14.425781-80.878907-40.617188-109.289063zm0 0"></path>
+    </symbol>
+    <symbol id="svg-balance">
+        <g>
+            <polygon points="150.618,395 130.5,455 324.5,455 304.382,395 	"></polygon>
+            <path d="M0,260c0,37.555,30.669,68,68.5,68c37.832,0,68.5-30.445,68.5-68H0z"></path>
+            <path d="M318,260c0,37.555,30.669,68,68.5,68c37.832,0,68.5-30.445,68.5-68H318z"></path>
+            <path d="M68.5,148.477L103.012,230h32.577l-44.45-105H212.5v240h30V125h121.362l-44.45,105h32.577l34.511-81.523L421.011,230
+		h32.578l-57.15-135H242.5V55.977c8.964-5.188,15-14.874,15-25.977c0-16.569-13.431-30-30-30s-30,13.431-30,30
+		c0,11.102,6.036,20.789,15,25.977V95H58.561L1.411,230h32.578L68.5,148.477z"></path>
+        </g>
+    </symbol>
+    <symbol id="check-mark">
+        <g>
+            <g>
+                <path d="M20.687,38.332c-2.072,2.072-5.434,2.072-7.505,0L1.554,26.704c-2.072-2.071-2.072-5.433,0-7.504
+			c2.071-2.072,5.433-2.072,7.505,0l6.928,6.927c0.523,0.522,1.372,0.522,1.896,0L36.642,7.368c2.071-2.072,5.433-2.072,7.505,0
+			c0.995,0.995,1.554,2.345,1.554,3.752c0,1.407-0.559,2.757-1.554,3.752L20.687,38.332z"></path>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="adv-1">
+        <style type="text/css">
+            .st0{fill:#BDD600;}
+            .st1{fill:none;stroke:#BDD600;stroke-width:0.5;stroke-linecap:round;stroke-miterlimit:10;stroke-dasharray:2;}
+            .st2{fill:none;stroke:#FFFFFF;stroke-width:0.5;stroke-linecap:round;stroke-miterlimit:10;stroke-dasharray:2;}
+            .st3{fill:none;stroke:#FFFFFF;stroke-width:0.75;stroke-miterlimit:10;}
+            .st4{opacity:0.4;fill:#FFFFFF;}
+            .st5{opacity:0.63;fill:none;stroke:#FFFFFF;stroke-width:0.5;stroke-miterlimit:10;}
+            .st6{fill:none;stroke:#FFFFFF;stroke-width:0.5;stroke-miterlimit:10;}
+        </style>
+        <g>
+            <circle class="st0" cx="17.9" cy="18.7" r="17.9"></circle>
+            <g>
+                <circle class="st1" cx="22.6" cy="18.1" r="17.9"></circle>
+                <path class="st2" d="M19.5,35.7c-8.4-1.5-14.7-8.8-14.7-17.6c0-8,5.2-14.7,12.4-17"></path>
+            </g>
+            <path class="st3" d="M20.5,31.8V18.3c0,0,2-6.2,10.5-5.2c0,0,0,2.9-5.2,5.2s-11.1,1.3-14.4-2s-2.3-4.9-2.3-4.9s7.4-0.9,9.2,1
+		C21.8,16.4,20.5,31.8,20.5,31.8z"></path>
+            <path class="st4" d="M22.2,13.4c1.4-1.3,3.5-2.8,6.2-3.1c0,0-1,6.2-8.5,8.9l0.1-1.4C20.3,16.1,21,14.5,22.2,13.4z"></path>
+            <path class="st5" d="M16.4,31.8v-6.9c0,0,1-3.2,5.4-2.7c0,0,0,1.5-2.7,2.7s-5.7,0.7-7.4-1s-1.2-2.5-1.2-2.5s3.8-0.5,4.7,0.5
+		C17,23.9,16.4,31.8,16.4,31.8z"></path>
+            <path class="st6" d="M23.1,31.3v-5.4c0,0-0.8-2.5-4.2-2.1c0,0,0,1.2,2.1,2.1c2.1,0.9,4.5,0.5,5.8-0.8c1.3-1.3,0.9-2,0.9-2
+		s-3-0.4-3.7,0.4C22.5,25.2,23.1,31.3,23.1,31.3z"></path>
+        </g>
+    </symbol>
+    <symbol id="adv-3">
+        <style type="text/css">
+            .st0{fill:#BDD600;}
+            .st1{fill:none;stroke:#BDD600;stroke-width:0.5;stroke-linecap:round;stroke-miterlimit:10;stroke-dasharray:2;}
+            .st2{fill:none;stroke:#FFFFFF;stroke-width:0.5;stroke-linecap:round;stroke-miterlimit:10;stroke-dasharray:2;}
+            .st3{fill:none;stroke:#FFFFFF;stroke-width:0.75;stroke-miterlimit:10;}
+            .st4{fill:none;stroke:#FFFFFF;stroke-width:0.5;stroke-miterlimit:10;}
+            .st5{fill:none;stroke:#FFFFFF;stroke-width:0.5;stroke-linecap:round;stroke-miterlimit:10;}
+        </style>
+        <g>
+            <circle class="st0" cx="17.9" cy="18.7" r="17.9"></circle>
+            <g>
+                <circle class="st1" cx="22.6" cy="18.1" r="17.9"></circle>
+                <path class="st2" d="M19.5,35.7c-8.4-1.5-14.7-8.8-14.7-17.6c0-8,5.2-14.7,12.4-17"></path>
+            </g>
+            <path class="st3" d="M20,33.3V20.8c0,0,1.8-5.8,9.7-4.9c0,0,0,2.7-4.9,4.9S14.5,22,11.5,19s-2.1-4.6-2.1-4.6s6.9-0.8,8.5,0.9
+		C21.2,19,20,33.3,20,33.3z"></path>
+            <path class="st4" d="M19.9,21.4L19.5,9.7c0,0-1.6-1.5-3.7,0c0,0-2.7-1.1-3.9,0c0,0-0.1,0-0.1-0.1c0.5-1,2.1-4.9,7.7-5.3"></path>
+            <path class="st4" d="M19.3,4.3c5.8,0.3,7.3,4.3,7.9,5.3c0,0,0,0.1-0.1,0.1c-1.1-1-3.9,0-3.9,0c-2.1-1.5-3.7,0-3.7,0"></path>
+            <path class="st4" d="M19.5,9.7V4.4c0,0-0.1-0.1-0.1,0c-2.5,1.8-4,5.2-4,5.2"></path>
+            <path class="st5" d="M23.2,9.7c0,0-1.6-4.3-3.7-5.3"></path>
+        </g>
+    </symbol>
+    <symbol id="adv-3">
+        <style type="text/css">
+            .st0{fill:#BDD600;}
+            .st1{fill:none;stroke:#BDD600;stroke-width:0.5;stroke-linecap:round;stroke-miterlimit:10;stroke-dasharray:2;}
+            .st2{fill:none;stroke:#FFFFFF;stroke-width:0.5;stroke-linecap:round;stroke-miterlimit:10;stroke-dasharray:2;}
+            .st3{fill:none;stroke:#FFFFFF;stroke-width:0.5;stroke-miterlimit:10;}
+        </style>
+        <g id="идеальная_формула">
+            <circle class="st0" cx="17.9" cy="18.7" r="17.9"></circle>
+            <g>
+                <circle class="st1" cx="22.6" cy="18.1" r="17.9"></circle>
+                <path class="st2" d="M19.5,35.7c-8.4-1.5-14.7-8.8-14.7-17.6c0-8,5.2-14.7,12.4-17"></path>
+            </g>
+            <g>
+                <path class="st3" d="M7.9,17.1l6.3-6.2h6.2l-3.5,2.6l3.6,3.7l-3.1,5.3l3.1,6.4c0,0,0,0.1-0.1,0L7.9,17.1z"></path>
+                <path class="st3" d="M33.1,17.1l-6.3-6.2h-6.2l3.5,2.6l-3.6,3.7l3.1,5.3c0,0-2.6,5.7-2.9,6.4c0,0,0,0,0,0L33.1,17.1z"></path>
+                <line class="st3" x1="7.9" y1="17.1" x2="32.9" y2="17.1"></line>
+                <path class="st3" d="M16.9,13.5L14.2,11c0,0,0-0.1,0-0.1h12.5c0,0,0,0,0,0l-2.7,2.5"></path>
+                <polyline class="st3" points="17.4,22.5 14.1,17.1 26.8,17.1 23.5,22.5 		"></polyline>
+                <path class="st3" d="M26.8,11v6.1h4.1L26.8,11C26.8,11,26.8,11,26.8,11z"></path>
+                <path class="st3" d="M14.1,17.1V11c0,0,0,0,0,0l-4.2,6.1H14.1z"></path>
+                <path class="st3" d="M30.9,17.1L20.6,28.9c0,0-0.1,0-0.1,0L9.9,17.1"></path>
+            </g>
+        </g>
+    </symbol>
+    <symbol id="facebook-svg">
+        <g>
+            <path d="M72.089,0.02L59.624,0C45.62,0,36.57,9.285,36.57,23.656v10.907H24.037c-1.083,0-1.96,0.878-1.96,1.961v15.803
+		c0,1.083,0.878,1.96,1.96,1.96h12.533v39.876c0,1.083,0.877,1.96,1.96,1.96h16.352c1.083,0,1.96-0.878,1.96-1.96V54.287h14.654
+		c1.083,0,1.96-0.877,1.96-1.96l0.006-15.803c0-0.52-0.207-1.018-0.574-1.386c-0.367-0.368-0.867-0.575-1.387-0.575H56.842v-9.246
+		c0-4.444,1.059-6.7,6.848-6.7l8.397-0.003c1.082,0,1.959-0.878,1.959-1.96V1.98C74.046,0.899,73.17,0.022,72.089,0.02z"></path>
+        </g>
+    </symbol>
+    <symbol id="instagram-svg">
+        <g>
+            <path d="M421.981,16.562C410.941,5.519,397.711,0,382.298,0H56.248C40.83,0,27.604,5.521,16.561,16.562
+		C5.52,27.6,0.001,40.828,0.001,56.243V382.29c0,15.413,5.518,28.644,16.56,39.683c11.043,11.04,24.272,16.563,39.687,16.563
+		h326.046c15.41,0,28.644-5.523,39.684-16.563c11.043-11.039,16.557-24.27,16.557-39.683V56.243
+		C438.534,40.825,433.021,27.604,421.981,16.562z M157.462,158.025c17.224-16.652,37.924-24.982,62.097-24.982
+		c24.36,0,45.153,8.33,62.381,24.982c17.228,16.655,25.837,36.785,25.837,60.386c0,23.598-8.609,43.729-25.837,60.379
+		c-17.228,16.659-38.014,24.988-62.381,24.988c-24.172,0-44.87-8.336-62.097-24.988c-17.228-16.652-25.841-36.781-25.841-60.379
+		C131.621,194.81,140.234,174.681,157.462,158.025z M388.865,370.589c0,4.945-1.718,9.083-5.141,12.416
+		c-3.433,3.33-7.519,4.996-12.282,4.996h-305.2c-4.948,0-9.091-1.666-12.419-4.996c-3.333-3.326-4.998-7.471-4.998-12.416V185.575
+		H89.08c-3.805,11.993-5.708,24.462-5.708,37.402c0,36.553,13.322,67.715,39.969,93.511c26.65,25.786,58.721,38.685,96.217,38.685
+		c24.744,0,47.583-5.903,68.527-17.703c20.937-11.807,37.486-27.839,49.676-48.112c12.183-20.272,18.274-42.4,18.274-66.38
+		c0-12.94-1.91-25.406-5.715-37.402h38.547v185.014H388.865z M388.865,115.626c0,5.52-1.903,10.184-5.716,13.99
+		c-3.805,3.809-8.466,5.711-13.989,5.711h-49.676c-5.517,0-10.185-1.903-13.99-5.711c-3.806-3.806-5.708-8.47-5.708-13.99V68.522
+		c0-5.33,1.902-9.945,5.708-13.848c3.806-3.901,8.474-5.854,13.99-5.854h49.676c5.523,0,10.185,1.952,13.989,5.854
+		c3.812,3.903,5.716,8.518,5.716,13.848V115.626z"></path>
+        </g>
+    </symbol>
+    <symbol id="youtube-svg">
+        <path d="m501.453125 56.09375c-5.902344-21.933594-23.195313-39.222656-45.125-45.128906-40.066406-10.964844-200.332031-10.964844-200.332031-10.964844s-160.261719 0-200.328125 10.546875c-21.507813 5.902344-39.222657 23.617187-45.125 45.546875-10.542969 40.0625-10.542969 123.148438-10.542969 123.148438s0 83.503906 10.542969 123.148437c5.90625 21.929687 23.195312 39.222656 45.128906 45.128906 40.484375 10.964844 200.328125 10.964844 200.328125 10.964844s160.261719 0 200.328125-10.546875c21.933594-5.902344 39.222656-23.195312 45.128906-45.125 10.542969-40.066406 10.542969-123.148438 10.542969-123.148438s.421875-83.507812-10.546875-123.570312zm0 0" fill="#f00"></path>
+        <path d="m204.96875 256 133.269531-76.757812-133.269531-76.757813zm0 0" fill="#fff"></path>
+    </symbol>
+</svg>
+
+<header class="header">
+    <div class="container">
+        <div class="header__inner">
+            <div class="header__logo">
+                <img src="./images/logo.svg" alt="img">
+            </div>
+            <div class="header__menu">
+                <ul class="header__menu-items">
+                    <li class="header__menu-item has-submenu">
+                        <a href="#" class="header__menu-link">
+                            Продукция
+                        </a>
+                    </li>
+                    <li class="header__menu-item has-submenu">
+                        <a href="#" class="header__menu-link">
+                            Сертификаты
+                        </a>
+                    </li>
+                    <li class="header__menu-item has-submenu">
+                        <a href="#" class="header__menu-link">
+                            о нас
+                        </a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a href="#" class="header__menu-link">
+                            Контакты
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="header__language">
+                <div class="header__language-item">
+                    <a href="#" class="header__language-link">
+                        Ua
+                    </a>
+                </div>
+                <div class="header__language-item active">
+                    <a href="#" class="header__language-link">
+                        RU
+                    </a>
+                </div>
+                <div class="header__language-item">
+                    <a href="#" class="header__language-link">
+                        Eng
+                    </a>
+                </div>
+            </div>
+
+            <div class="header__right">
+                <a href="#" class="header__like">
+                    <svg viewBox="0 -28 512.00002 512" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="#svg-like" x="0" y="0" />
+                    </svg>
+                </a>
+                <a href="#" class="header__compare">
+
+                </a>
+                <a href="#" class="header__cart active">
+                    <span class="header__cart-count">3</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="main">\
+
+    <div class="home-top">
+        <div class="container">
+            <h1 class="home-top__title">
+                продукти сучасних
+                агро технологій
+            </h1>
+
+            <div class="home-top__list">
+                <div class="home-top__list-item">
+                    Мікродобрива Фрея-Акватм з гуматом калію
+                </div>
+                <div class="home-top__list-item">
+                    Монодобрива (хелати)  Фрея® з гуматом калію
+                </div>
+                <div class="home-top__list-item">
+                    Рідкі азотні добрива
+                </div>
+                <div class="home-top__list-item">
+                    Гумінов реагенти
+                </div>
+                <div class="home-top__list-item">
+                    Мінеральні добрива
+                </div>
+                <div class="home-top__list-item">
+                    Пересувна лабораторія листової діагностики
+                </div>
+            </div>
+
+            <div class="home-top__img">
+
+            </div>
+
+            <div class="home-top__form">
+                <div class="home-top__form-left">
+                    <div class="home-top__form-percent">
+                        20%
+                    </div>
+                    <div class="home-top__form-caption">
+                        Якшо влаштовує знижка залиши телефон
+                        і ми передзвонимо
+                    </div>
+                </div>
+                <div class="home-top__form-right">
+                    <div class="home-top__form-title">
+                        <span>Акція!</span> до 15 лютого 2020 року
+                    </div>
+                    <div class="home-top__form-subtitle">
+                        При замовленні 3-х каністр Фрея-Акватм  марки С(11) знижка на третю каністру 20%
+                    </div>
+                    <form action="">
+                        <input type="text" placeholder="Ім´я">
+                        <input type="text" placeholder="Телефон">
+                        <a href="#" class="home-top__form-btn">
+                            відправити
+                        </a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="advantage">
+        <div class="container">
+            <div class="advantage__title site-title">
+                <h2>
+                    преимущества
+                </h2>
+            </div>
+            <div class="advantage__items">
+                <div class="advantage__item">
+                    <div class="advantage__img">
+
+                        <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                             width="40.7px" height="36.6px" viewBox="0 0 40.7 36.6" style="enable-background:new 0 0 40.7 36.6;" xml:space="preserve">
+                            <use href="#adv-3"></use>
+                        </svg>
+                    </div>
+                    <div class="advantage__name">
+                        Урожайність
+                    </div>
+                    <div class="advantage__caption">
+                        Гарантуємо приріст врожаю
+                        до 10-30% при дотриманні умов агротехнологій.
+                    </div>
+                </div>
+
+                <div class="advantage__item">
+                    <div class="advantage__img">
+
+                    </div>
+                    <div class="advantage__name">
+                        Економічна ефективність
+                    </div>
+                    <div class="advantage__caption">
+                        Зростання прибутку на 10-20%
+                        за рахунок зниження витрат
+                        на виробництво сільгоспродукції
+                    </div>
+                </div>
+                <div class="advantage__item">
+                    <div class="advantage__img">
+
+                    </div>
+                    <div class="advantage__name">
+                        Безпека
+                    </div>
+                    <div class="advantage__caption">
+                        Поліпшення біохімічного складу продукції та збереження родючість грунтів
+                    </div>
+                </div>
+                <div class="advantage__item">
+                    <div class="advantage__img">
+
+                    </div>
+                    <div class="advantage__name">
+                        Вдосконалення
+                    </div>
+                    <div class="advantage__caption">
+                        Продукція пройшла апробацію. Польові випробування мають схвальні відгуки науковців
+                        і аграріїв.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="catalog">
+        <div class="container">
+            <div class="catalog__title site-title">
+                <h2>
+                    Продукция
+                </h2>
+            </div>
+
+            <div class="catalog__top">
+                <div class="catalog__nav">
+                    <div class="catalog__nav-left">
+                        <a href="#" class="catalog__nav-left-btn">
+                            Опт
+                        </a>
+                        <a href="#" class="catalog__nav-left-btn">
+                            розница
+                        </a>
+                    </div>
+                    <div class="catalog__nav-right">
+                         <div class="catalog__nav-sort">
+                             Сортировать по:
+                             <a href="#" class="catalog__nav-sort-link active">
+                                 Цене
+                             </a>
+                             <a href="#" class="catalog__nav-sort-link">
+                                 Алфавиту
+                             </a>
+                             <div class="catalog__nav-views">
+                                 <a href="#" class="catalog__nav-view active">
+
+                                 </a>
+                                 <a href="#" class="catalog__nav-view">
+
+                                 </a>
+                                 <a href="#" class="catalog__nav-view">
+
+                                 </a>
+                             </div>
+                         </div>
+                    </div>
+                </div>
+                <div class="catalog__categories">
+                    <a href="#" class="catalog__category">
+                        Категория
+                    </a>
+                    <a href="#" class="catalog__category">
+                        Категория
+                    </a>
+                    <a href="#" class="catalog__category">
+                        Категория
+                    </a>
+                    <a href="#" class="catalog__category">
+                        Категория
+                    </a>
+                </div>
+            </div>
+
+            <div class="products">
+                <div class="product">
+                    <div class="product__img">
+                        <img src="" alt="img">
+                    </div>
+                    <div class="product__name">
+                        Моноудобрение Фрея-Акватм
+                        (Zn) цинк
+                    </div>
+
+                    <div class="product__desc">
+                        Моноудобрение Фрея-Акватм (Zn) цинк представдяет собой высококачественный, жидкий... монохелат цинка на основе ОЭДФ обогащенный гуматом калия
+                        <a href="#" class="product__desc-link">
+                            Подробнее
+                        </a>
+                    </div>
+                    <div class="product__middle">
+                        <div class="product__price">
+                            <div class="product__price-main">
+                                957 грн
+                            </div>
+                            <div class="product__price-old">
+                                1 050 грн
+                            </div>
+                        </div>
+
+                        <div class="product__pay">
+                            <a href="#" class="product__pay-btn">
+                                Купить
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="product__types">
+                        <div class="product__types-title">
+                            Выберите нужный объем:
+                        </div>
+                        <a href="#" class="product__type active">
+                            1 кг
+                        </a>
+                        <a href="#" class="product__type">
+                            5 кг
+                        </a>
+                        <a href="#" class="product__type">
+                            10 кг
+                        </a>
+                    </div>
+
+                    <div class="product__bottom">
+                        <div class="product__left">
+                            <a href="#" class="product__like">
+
+                            </a>
+                            <a href="#" class="product__compare">
+
+                            </a>
+                        </div>
+
+                        <div class="product__right">
+                            <div class="product__stock active">
+                                В наличии
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product__img">
+                        <img src="" alt="img">
+                    </div>
+                    <div class="product__name">
+                        Моноудобрение Фрея-Акватм
+                        (Zn) цинк
+                    </div>
+
+                    <div class="product__desc">
+                        Моноудобрение Фрея-Акватм (Zn) цинк представдяет собой высококачественный, жидкий... монохелат цинка на основе ОЭДФ обогащенный гуматом калия
+                        <a href="#" class="product__desc-link">
+                            Подробнее
+                        </a>
+                    </div>
+                    <div class="product__middle">
+                        <div class="product__price">
+                            <div class="product__price-main">
+                                957 грн
+                            </div>
+                            <div class="product__price-old">
+                                1 050 грн
+                            </div>
+                        </div>
+
+                        <div class="product__pay">
+                            <a href="#" class="product__pay-btn">
+                                Купить
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="product__types">
+                        <div class="product__types-title">
+                            Выберите нужный объем:
+                        </div>
+                        <a href="#" class="product__type active">
+                            1 кг
+                        </a>
+                        <a href="#" class="product__type">
+                            5 кг
+                        </a>
+                        <a href="#" class="product__type">
+                            10 кг
+                        </a>
+                    </div>
+
+                    <div class="product__bottom">
+                        <div class="product__left">
+                            <a href="#" class="product__like">
+
+                            </a>
+                            <a href="#" class="product__compare">
+
+                            </a>
+                        </div>
+
+                        <div class="product__right">
+                            <div class="product__stock active">
+                                В наличии
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product__img">
+                        <img src="" alt="img">
+                    </div>
+                    <div class="product__name">
+                        Моноудобрение Фрея-Акватм
+                        (Zn) цинк
+                    </div>
+
+                    <div class="product__desc">
+                        Моноудобрение Фрея-Акватм (Zn) цинк представдяет собой высококачественный, жидкий... монохелат цинка на основе ОЭДФ обогащенный гуматом калия
+                        <a href="#" class="product__desc-link">
+                            Подробнее
+                        </a>
+                    </div>
+                    <div class="product__middle">
+                        <div class="product__price">
+                            <div class="product__price-main">
+                                957 грн
+                            </div>
+                            <div class="product__price-old">
+                                1 050 грн
+                            </div>
+                        </div>
+
+                        <div class="product__pay">
+                            <a href="#" class="product__pay-btn">
+                                Купить
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="product__types">
+                        <div class="product__types-title">
+                            Выберите нужный объем:
+                        </div>
+                        <a href="#" class="product__type active">
+                            1 кг
+                        </a>
+                        <a href="#" class="product__type">
+                            5 кг
+                        </a>
+                        <a href="#" class="product__type">
+                            10 кг
+                        </a>
+                    </div>
+
+                    <div class="product__bottom">
+                        <div class="product__left">
+                            <a href="#" class="product__like">
+
+                            </a>
+                            <a href="#" class="product__compare">
+
+                            </a>
+                        </div>
+
+                        <div class="product__right">
+                            <div class="product__stock active">
+                                В наличии
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product__img">
+                        <img src="" alt="img">
+                    </div>
+                    <div class="product__name">
+                        Моноудобрение Фрея-Акватм
+                        (Zn) цинк
+                    </div>
+
+                    <div class="product__desc">
+                        Моноудобрение Фрея-Акватм (Zn) цинк представдяет собой высококачественный, жидкий... монохелат цинка на основе ОЭДФ обогащенный гуматом калия
+                        <a href="#" class="product__desc-link">
+                            Подробнее
+                        </a>
+                    </div>
+                    <div class="product__middle">
+                        <div class="product__price">
+                            <div class="product__price-main">
+                                957 грн
+                            </div>
+                            <div class="product__price-old">
+                                1 050 грн
+                            </div>
+                        </div>
+
+                        <div class="product__pay">
+                            <a href="#" class="product__pay-btn">
+                                Купить
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="product__types">
+                        <div class="product__types-title">
+                            Выберите нужный объем:
+                        </div>
+                        <a href="#" class="product__type active">
+                            1 кг
+                        </a>
+                        <a href="#" class="product__type">
+                            5 кг
+                        </a>
+                        <a href="#" class="product__type">
+                            10 кг
+                        </a>
+                    </div>
+
+                    <div class="product__bottom">
+                        <div class="product__left">
+                            <a href="#" class="product__like">
+
+                            </a>
+                            <a href="#" class="product__compare">
+
+                            </a>
+                        </div>
+
+                        <div class="product__right">
+                            <div class="product__stock active">
+                                В наличии
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="pagination">
+                <a href="#" class="pagination__first">
+
+                </a>
+                <a href="#" class="pagination__item">
+                    1
+                </a>
+                <a href="#" class="pagination__item">
+                    2
+                </a>
+                <a href="#" class="pagination__item">
+                    3
+                </a>
+                <a href="#" class="pagination__item">
+                    4
+                </a>
+                <a href="#" class="pagination__item">
+                    5
+                </a>
+                <a href="#" class="pagination__last">
+
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="minerals">
+        <div class="container">
+            <div class="minerals__title site-title">
+                <h2>
+                    Минеральные удобрения
+                </h2>
+            </div>
+            <div class="minerals__subtitle">
+                Разнообразный и богатый опыт
+            </div>
+            <div class="minerals__desc">
+                Разнообразный и богатый опыт начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития.
+                <br>
+                Идейные соображения высшего порядка, а также рамки и место обучения кадров способствует подготовки и реализации направлений прогрессивного развития. Равным образом сложившаяся структура организации позволяет выполнять важные задания по разработке дальнейших направлений развития.
+            </div>
+
+            <a href="#" class="minerals__btn">
+                Скачать pdf каталог
+            </a>
+        </div>
+    </div>
+
+    <div class="about">
+        <div class="container">
+            <div class="about__title site-title">
+                <h2>
+                    о нас:
+                </h2>
+            </div>
+
+            <div class="about__left">
+                <img src="" alt="img" class="about__img">
+            </div>
+
+            <div class="about__right">
+                До групи компаній Фрея® входять підприємства: НВК «Фрея-Агро», ТОВ «Фрея Трейд», ТОВ «ВО «АДАМАС», ПП «Агро Ферта».
+                З моменту заснування у 2011 році на підприємстві групи (НВК «Фрея-Агро») виробляються різні види мікродобрив на основі гумінових кислот торфу з додаванням макро- та мікроелементів, монодобрив на основі органічних поліборатів та добрив на основі ОЄДФ, збагачених гуматом калію.
+                Заводи з виробництва розташовані у м. Городище Черкаської області та у с.Добре Баштанського району Миколаївської області. За допомогою власної стаціонарної лабораторії ми контролюємо якість нашої продукції на кожному етапі виробництва.
+                У тісному контакті з профільними науково-дослідними інститутами постійно проводимо заходи з вдосконалення і покращення якісних характеристик наших добрив. Результати польових випробувань переконливо доказують їх ефективність.
+                Компанії групи Фрея®: ТОВ «Фрея Трейд», ТОВ «ВО «АДАМАС», ПП «Агро-Ферта» реалізують добрива як власного виробництва так і мінеральних добрив власного імпорту з складів в м. Городище та з вантажних терміналів в м. Сміла Черкаської області та с. Добре Баштанського району Миколаївської області. Використовуючи склади та термінали, а також мережу своїх представників у різних областях України, ми забезпечуємо добривами аграріїв по всій території країни. Нещодавно почали проваджувати комплексну програму з реалізації продукції власного виробництва за кордон.
+                Надаємо послуги функціональної експрес-діагностики стану мінерального живлення рослин з використанням пересувної лабораторії «АГРОВЕКТОР ПФ-014». Оперативний контроль умов живлення і, відповідно до нього, коригування норм, способів та строків внесення добрив, дають змогу, підвищити їх ефективність на 20-30%. Весь аналіз проводиться безпосередньо в полі і займає 2­-3 години.
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="certificate">
+        <div class="container">
+            <div class="certificate__title site-title">
+                <h2>
+                    сертификация
+                </h2>
+            </div>
+            <div class="certificate__categories">
+                <a href="#" class="certificate__category">
+                    Сертификаты <br>
+                    о государственной регистрации
+                </a>
+                <a href="#" class="certificate__category">
+                    Заключение экспертиз
+                </a>
+                <a href="#" class="certificate__category">
+                    Отчеты о проведении <br>
+                    полевых исследований
+                </a>
+            </div>
+
+            <div class="certificate__slider">
+                <div class="certificate__item">
+                    <img src="" alt="img">
+                    <div class="certificate__txt">
+                        Свидетельство о государственной
+                        регистрации удобрений Фрея-Аква™
+                    </div>
+                </div>
+                <div class="certificate__item">
+                    <img src="" alt="img">
+                    <div class="certificate__txt">
+                        Свидетельство о государственной
+                        регистрации удобрений Фрея-Аква™
+                    </div>
+                </div>
+                <div class="certificate__item">
+                    <img src="" alt="img">
+                    <div class="certificate__txt">
+                        Свидетельство о государственной
+                        регистрации удобрений Фрея-Аква™
+                    </div>
+                </div>
+                <div class="certificate__item">
+                    <img src="" alt="img">
+                    <div class="certificate__txt">
+                        Свидетельство о государственной
+                        регистрации удобрений Фрея-Аква™
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="news">
+        <div class="container">
+            <div class="news__title site-title">
+                <h2>
+                    новости
+                </h2>
+            </div>
+
+            <div class="news__items">
+                <div class="news__item">
+                    <div class="news__img">
+                        <img src="" alt="img">
+                    </div>
+                    <div class="news__desc">
+                        <div class="news__category">
+                            Категория
+                        </div>
+                        <div class="news__date">
+                            19.12.2019
+                        </div>
+                        <div class="news__title">
+                            Большие праздничные скидки на удобрения!
+                        </div>
+                        <div class="news__txt">
+                            Группа Компаний Фрея® в канун празднования Нового года и Рождества Христового, дарит
+                            вам скидку на микроудобрения нашего производства...
+                            20% на микроудобрения Фрея-Аква™ марок: С(11), С(12), С(13), С(14), С(15), С(16), С(17), С(18), С(19) – жидкие органо-минеральные удобрения
+                            с гуматом калия.
+                        </div>
+                        <div class="news__link">
+                            <a href="#">
+                                Подробнее
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="news__item">
+                    <div class="news__img">
+                        <img src="" alt="img">
+                    </div>
+                    <div class="news__desc">
+                        <div class="news__category">
+                            Категория
+                        </div>
+                        <div class="news__date">
+                            19.12.2019
+                        </div>
+                        <div class="news__title">
+                            Большие праздничные скидки на удобрения!
+                        </div>
+                        <div class="news__txt">
+                            Группа Компаний Фрея® в канун празднования Нового года и Рождества Христового, дарит
+                            вам скидку на микроудобрения нашего производства...
+                            20% на микроудобрения Фрея-Аква™ марок: С(11), С(12), С(13), С(14), С(15), С(16), С(17), С(18), С(19) – жидкие органо-минеральные удобрения
+                            с гуматом калия.
+                        </div>
+                        <div class="news__link">
+                            <a href="#">
+                                Подробнее
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="news__item">
+                    <div class="news__img">
+                        <img src="" alt="img">
+                    </div>
+                    <div class="news__desc">
+                        <div class="news__category">
+                            Категория
+                        </div>
+                        <div class="news__date">
+                            19.12.2019
+                        </div>
+                        <div class="news__title">
+                            Большие праздничные скидки на удобрения!
+                        </div>
+                        <div class="news__txt">
+                            Группа Компаний Фрея® в канун празднования Нового года и Рождества Христового, дарит
+                            вам скидку на микроудобрения нашего производства...
+                            20% на микроудобрения Фрея-Аква™ марок: С(11), С(12), С(13), С(14), С(15), С(16), С(17), С(18), С(19) – жидкие органо-минеральные удобрения
+                            с гуматом калия.
+                        </div>
+                        <div class="news__link">
+                            <a href="#">
+                                Подробнее
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="news__more">
+                <a href="#" class="news__more-btn">
+                    посмотреть все новости
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+</main>
+
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer__left">
+            <div class="footer__logo">
+                <img src="./images/footer-logo.svg" alt="img">
+                <div class="footer__txt">
+                    Группа компаний Фрея включает в себя: НПК «Фрея-Агро», ООО «Фрея Трейд», ООО «ПО «Адамас», ЧП «Агро Ферта».
+                    <br> <br>
+                    Мы производим и поставляем качественные удобрения, постоянно модернизируя и совершенствуя технологические процессы. Научно-производственный комплекс «Фрея-Агро» - лидер украинского рынка по производству органоминеральных удобрений и почвомодификаторов нового поколения.
+                </div>
+                <div class="footer__social">
+                    <a href="#" class="footer__social-i facebook">
+
+                    </a>
+                    <a href="#" class="footer__social-i instagram">
+
+                    </a>
+                    <a href="#" class="footer__social-i youtube">
+
+                    </a>
+                </div>
+                <a href="#" class="politics">
+                    Политика конфиденциальности
+                </a>
+            </div>
+        </div>
+        <div class="footer__right">
+            <div class="footer__right-top">
+                <div class="footer__right-col">
+                    <a href="#" class="footer__right-link">
+                        О нас
+                    </a>
+                    <a href="#" class="footer__right-sub-link">
+                        Пересувна лабораторія
+                        листової діагностики
+                    </a>
+                    <a href="#" class="footer__right-link">
+                        Новини
+                    </a>
+                    <a href="#" class="footer__right-link">
+                        Акції
+                    </a>
+                    <a href="#" class="footer__right-link">
+                        Презентації
+                    </a>
+                </div>
+                <div class="footer__right-col">
+                    <a href="#" class="footer__right-link">
+                        Сертификация
+                    </a>
+                    <a href="#" class="footer__right-sub-link">
+                        Свидетельство о регистраци
+                    </a>
+                    <a href="#" class="footer__right-sub-link">
+                        Заключение экспертиз
+                    </a>
+                    <a href="#" class="footer__right-sub-link">
+                        Полевые испытания
+                    </a>
+                </div>
+                <div class="footer__right-col">
+                    <a href="#" class="footer__right-mail">
+                        freya-agro@ukr.net
+                    </a>
+                    <a href="#" class="footer__right-phone">
+                        +38 (097) 90 23 560
+                    </a>
+                </div>
+            </div>
+            <div class="footer__right-bottom">
+
+                <div class="footer__right-col">
+                    <a href="#" class="footer__right-link">
+                        Контакты
+                    </a>
+                    <a href="#" class="footer__right-sub-link">
+                        Региональные менеджеры
+                    </a>
+                    <a href="#" class="footer__right-sub-link">
+                        Доставка и оплата
+                    </a>
+                    <a href="#" class="footer__right-sub-link">
+                        Возврат
+                    </a>
+                </div>
+
+                <div class="footer__right-col">
+                    <a href="#" class="footer__right-link">
+                        Сотрудничество
+                    </a>
+                    <a href="#" class="footer__right-sub-link">
+                        Презентации
+                    </a>
+                    <a href="#" class="footer__right-sub-link">
+                        Вакансии
+                    </a>
+                    <a href="#" class="footer__right-sub-link">
+                        Партнерам
+                    </a>
+                </div>
+
+                <div class="footer__right-col">
+                    <a href="#" class="footer__right-link">
+                        Продукция
+                    </a>
+                    <a href="#" class="footer__right-sub-link">
+                        Микроудобрения Фрея-Аква
+                        с гуматом калия
+                    </a>
+                    <a href="#" class="footer__right-sub-link">
+                        Жидкие азотные удобрения
+                    </a>
+                    <a href="#" class="footer__right-sub-link">
+                        Гуминовые реагенты и препараты
+                    </a>
+                    <a href="#" class="footer__right-sub-link">
+                        Моноудобрения (Хелаты) Фрея
+                        с гуматом калия
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
