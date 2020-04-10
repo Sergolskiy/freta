@@ -147,5 +147,37 @@ $(document).ready(function () {
         jQuery('html,body').animate({scrollTop:0},1000);
     });
 
+    $(document).on('click', '.contact__tab-name', function (e) {
+        $(this).parents().toggleClass('open');
+    });
+
+    $(document).on('click', '.region-name', function (e) {
+        $('.region-dillers.open').slideToggle();
+        $('.region-dillers.open').removeClass('open');
+        $(this).siblings('.region-dillers').slideToggle();
+        $(this).siblings('.region-dillers').addClass('open');
+    });
+
+    $(document).on('click', '.contact__tab-dealers-btn', function (e) {
+       $('.dealers-popup').addClass('open');
+       $('body').addClass('overHid');
+    });
+
+    $(document).on('click', '.popup__close', function (e) {
+        $('.dealers-popup').removeClass('open');
+        $('body').removeClass('overHid');
+    });
+
+    $(document).on('click', '.popup', function (e) {
+        if(e.target.classList[0] == "popup") {
+            $('.dealers-popup').removeClass('open');
+            $('body').removeClass('overHid');
+        }
+    });
+
+
+
+
+
 
 });
