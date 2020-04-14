@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="css/select2.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -231,7 +232,7 @@
     <div class="container">
         <div class="header__inner">
             <div class="header__logo">
-                <a href="/freta">
+                <a href="/freya">
                     <img src="./images/logo.svg" alt="img">
                 </a>
             </div>
@@ -385,6 +386,15 @@
                         <a href="#" class="header__language-link">
                             Eng
                         </a>
+                    </div>
+                </div>
+
+                <div class="header__phone-mobile">
+                    <a href="tel:08001234567" class="header__phone-link-mobile">
+                        0 800 123 4567
+                    </a>
+                    <div class="header__phone-mobile-txt">
+                        Дзвінки в межах України безкоштовні
                     </div>
                 </div>
 
@@ -1369,18 +1379,52 @@
                     </i>
                 </h2>
             </div>
+
             <div class="certificate__categories">
-                <a href="#" class="certificate__category">
-                    Сертифікати <br> про державну реєстрацію
-                </a>
-                <a href="#" class="certificate__category">
-                    Висновки експертиз
-                </a>
-                <a href="#" class="certificate__category">
-                    Звіти про проведення <br>
-                    польових досліджень
-                </a>
+                <div class="certificate__category-wrap">
+                    <select name="" class="js-example-basic-single" id="certificate__category01">
+                        <option value="Сертифікати про державну реєстрацію">
+                            Сертифікати <br> про державну реєстрацію
+                        </option>
+                    </select>
+                </div>
+
+                <div class="certificate__category-wrap">
+                    <select name="" class="js-example-basic-single"  id="certificate__category02">
+                        <option value="Висновки експертиз">
+                            Висновки експертиз
+                        </option>
+                    </select>
+                </div>
+
+                <div class="certificate__category-wrap">
+                    <select name="" class="js-example-basic-single"  id="certificate__category03">
+                        <option value="Звіти про проведення польових досліджень">
+                            Звіти про проведення <br>
+                            польових досліджень
+                        </option>
+                        <option value="Звіти про проведення польових досліджень 2020">
+                            Звіти про проведення <br>
+                            польових досліджень 2020
+                        </option>
+                    </select>
+                </div>
             </div>
+
+<!--            <div class="certificate__categories">-->
+<!--                <a href="javascript:void(0);" class="certificate__category">-->
+<!--                    Сертифікати <br> про державну реєстрацію-->
+<!--                </a>-->
+
+<!--                <a href="javascript:void(0);" class="certificate__category">-->
+<!--                    Висновки експертиз-->
+<!--                </a>-->
+
+<!--                <a href="javascript:void(0);" class="certificate__category">-->
+<!--                    Звіти про проведення <br>-->
+<!--                    польових досліджень-->
+<!--                </a>-->
+<!--            </div>-->
 
             <div class="certificate__slider certificate__slider-slider owl-carousel">
                 <div class="certificate__item">
@@ -1827,6 +1871,7 @@
 <script src="js/jquery-3.4.1.min.js"></script>
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/jquery.fancybox.min.js"></script>
+<script src="js/select2.full.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

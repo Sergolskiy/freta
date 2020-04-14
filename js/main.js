@@ -28,6 +28,60 @@ $(document).ready(function () {
         }
     });
 
+    $('.field-studio-certificats-slider-slider').owlCarousel({
+        items: 3,
+        nav: true,
+        margin: 10,
+        responsive : {
+            // breakpoint from 0 up
+            0 : {
+                items : 1,
+                margin: 0,
+            },
+            // breakpoint from 480 up
+            480 : {
+                margin: 10,
+                items : 1,
+            },
+            // breakpoint from 768 up
+            768 : {
+                items : 2,
+                margin: 10,
+            },
+            1100 : {
+                items : 3,
+                margin: 10,
+            }
+        }
+    });
+
+    $('.research__slider').owlCarousel({
+        items: 23,
+        nav: true,
+        margin: 10,
+        responsive : {
+            // breakpoint from 0 up
+            0 : {
+                items : 1,
+                margin: 0,
+            },
+            // breakpoint from 480 up
+            480 : {
+                margin: 10,
+                items : 1,
+            },
+            // breakpoint from 768 up
+            768 : {
+                items : 2,
+                margin: 10,
+            },
+            1100 : {
+                items : 2,
+                margin: 10,
+            }
+        }
+    });
+
     $('.the-boys-slider').owlCarousel({
         items: 3,
         nav: true,
@@ -57,6 +111,29 @@ $(document).ready(function () {
 
     if ($(window).width() < 992) {
         $('.viewed__list').owlCarousel({
+            items: 3,
+            nav: true,
+            margin: 10,
+            responsive : {
+                // breakpoint from 0 up
+                0 : {
+                    items : 1,
+                    margin: 0,
+                },
+                // breakpoint from 480 up
+                480 : {
+                    margin: 10,
+                    items : 2,
+                },
+                // breakpoint from 768 up
+                768 : {
+                    items : 3,
+                    margin: 10,
+                }
+            }
+        });
+
+        $('.news__items-product-slider').owlCarousel({
             items: 3,
             nav: true,
             margin: 10,
@@ -173,6 +250,41 @@ $(document).ready(function () {
             $('.dealers-popup').removeClass('open');
             $('body').removeClass('overHid');
         }
+    });
+
+    if ($(window).width() < 768) {
+
+        $(document).scroll(function () {
+            var top = $(document).scrollTop();
+
+            if (top < 40) {
+                $(".detail-head").addClass('stay');
+                $(".detail-head").removeClass('detail-head--scrolled');
+            } else {
+                $(".detail-head").removeClass('stay');
+                $(".detail-head").addClass('detail-head--scrolled');
+            }
+        });
+
+    }
+
+    $(document).scroll(function () {
+        var top = $(document).scrollTop();
+
+        if (top < 90) {
+            $(".footer-btn-to-top").addClass('stay');
+            $(".footer-btn-to-top").removeClass('scrolled');
+        } else {
+            $(".footer-btn-to-top").removeClass('stay');
+            $(".footer-btn-to-top").addClass('scrolled');
+        }
+    });
+
+
+    $(document).ready(function() {
+        $('.js-example-basic-single').select2({
+            minimumResultsForSearch: -1
+        });
     });
 
 
