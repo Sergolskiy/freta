@@ -157,6 +157,15 @@ $(document).ready(function () {
         });
     }
 
+ if ($(window).width() < 580) {
+        $('.reviev-fb-slider').owlCarousel({
+            items: 1,
+            nav: true,
+            margin: 10
+        });
+
+    }
+
 
     $('.has-submenu').click(function () {
     });
@@ -286,6 +295,11 @@ $(document).ready(function () {
             minimumResultsForSearch: -1
         });
     });
+
+
+    $(document).on('click', '.mobile-menu', function (e) {
+			e.preventDefault();
+		});
 
 
 
