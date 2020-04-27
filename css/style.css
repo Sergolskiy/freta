@@ -233,6 +233,11 @@ a{
     font: 14px 'Roboto-Regular';
     text-decoration: none;
     color: #696969;
+    transition: 0.3s;
+}
+
+.submenu-link:hover{
+    color: #036635;
 }
 
 .submenu-item{
@@ -909,6 +914,7 @@ a{
     width: calc(25% - 20px);
     background: white;
     padding: 30px 20px;
+    padding: 40px 20px 30px;
     border-radius: 5px;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.04);
     transition: 0.3s;
@@ -933,7 +939,7 @@ a{
 
 .product__name{
     color: #636363;
-    font: 14px/20px 'Roboto-Regular';
+    font: 14px/20px 'Roboto-Bold';
     margin: 15px 0 10px;
 }
 
@@ -1193,7 +1199,7 @@ a{
 
 .minerals__subtitle{
     font: 18px 'Roboto-Medium';
-    margin-top: 45px;
+    margin-top: 40px;
     margin-bottom: 25px;
 }
 
@@ -1276,6 +1282,7 @@ a{
 
 .certificate__title{
     color: white;
+    text-align: center;
 }
 
 .certificate__title h2:before{
@@ -1369,6 +1376,11 @@ a{
     padding: 10px 15px;
     color: #636363;
     font: 14px 'Roboto-Regular';
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected]{
+    background-color: #58a618;
+    outline: none;
 }
 
 
@@ -1825,7 +1837,8 @@ a{
 
 .laboratory-top{
     background: url("../images/lab-top-bg.png") center bottom no-repeat;
-    padding-bottom: 315px;
+    /*padding-bottom: 315px;*/
+    padding-bottom: 280px;
 }
 
 .laboratory-top__inner{
@@ -1883,7 +1896,8 @@ a{
 }
 
 .laboratory-form{
-    padding-top: 50px;
+    /*padding-top: 50px;*/
+    padding-top: 90px;
 }
 
 .form-wrap{
@@ -1944,8 +1958,10 @@ a{
 }
 
 .minerals.stages{
+    background-color: #fafafa!important;
     padding-top: 195px;
-    padding-bottom: 300px;
+    /*padding-bottom: 300px;*/
+    padding-bottom: 280px;
     background: url("../images/lab-bg4.png") center center no-repeat;
     position: relative;
     z-index: 1;
@@ -1956,7 +1972,7 @@ a{
 }
 
 .minerals__title{
-    padding-bottom: 45px;
+    /*padding-bottom: 45px;*/
 }
 
 .minerals__stages__number{
@@ -2574,7 +2590,7 @@ a{
 
 .contact__title{
 	justify-content: start;
-	padding: 65px 0;
+	padding: 65px 15px;
 	color: white;
 }
 
@@ -2619,6 +2635,7 @@ a{
 .contact__tab-phone .contact__tab-content--phone-link{
     font: 16px 'AvenirNextCyr-Demi';
 }
+
 
 .contact__tab-list{
 
@@ -2698,7 +2715,7 @@ a{
 }
 
 .contact__tab-content-row a:hover{
-	color: #b2d235;
+	color: #036635;
 }
 
 
@@ -2768,6 +2785,26 @@ a{
 	z-index: 1;
 }
 
+.contact__tab-phone--top .contact__tab-content-row{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact__tab-phone--top .contact__tab-phone-txt{
+    font: 12px 'Roboto-Regular';
+    color: #9d9d9d;
+    text-align: center;
+}
+
+.contact__tab-phone--top .contact__tab-content--phone-link{
+    color: #ef8000;
+    text-decoration: none;
+    font: 22px 'AvenirNextCyr-Medium';
+    text-align: center;
+    display: block;
+}
+
 
 
 .contact__map{
@@ -2775,9 +2812,11 @@ a{
 	width: calc(100% - 300px);
 }
 
+
 .contact__map iframe{
 	width: 100%;
-    height: 550px;
+    /*height: 550px;*/
+    height: 100%;
 }
 
 
@@ -2804,7 +2843,7 @@ a{
 }
 
 .region-name:hover{
-	color: #b2d235;
+	color: #036635;
 }
 
 .region-dillers{
@@ -2854,7 +2893,7 @@ a{
 
 .popup__inner{
 	position: relative;
-    max-width: fit-content;
+    width: min-content;
     margin:  0 auto;
 }
 
@@ -3048,8 +3087,8 @@ a{
 
 
 .field-studies{
-    background-position: center top;
-    background-image: url("../images/field-studies-top-bg.png");
+    background-position: center bottom;
+    background-image: url("../images/field-studies-top-bg-full.png");
 }
 
 .field-studies-page .breadcrumbs{
@@ -3075,7 +3114,7 @@ a{
 }
 
 .field-studies__top-left{
-    max-width: 100%;
+    /*max-width: 100%;*/
 }
 
 .field-studies__top-left .laboratory-top__desc{
@@ -3137,7 +3176,7 @@ a{
 .field-studio--minerals{
     background-color: #fafafa !important;
     background-position: center top !important;
-    padding-bottom: 150px !important;
+    padding-bottom: 220px !important;
 }
 
 .research{
@@ -3634,8 +3673,8 @@ a{
         background-size: contain;
         transition: 0.5s;
         z-index: 10;
-        padding-bottom: 75px;
-        /*padding-bottom: 65px;*/
+        /*padding-bottom: 75px;*/
+        padding-bottom: 65px;
         opacity: 0;
     }
 
@@ -4001,7 +4040,7 @@ a{
       display: flex;
       width: 100%;
       justify-content: center;
-      /*order: 15;*/
+      order: 15;
       flex-direction: column;
       align-items: center;
       padding: 15px;
@@ -4014,9 +4053,10 @@ a{
     }
 
   .header__phone-link-mobile {
-      color: #00682e;
+      /*color: #00682e;*/
+      color: #ef8000;
       text-decoration: none;
-      font: 16px 'AvenirNextCyr-Medium';
+      font: 22px 'AvenirNextCyr-Medium';
   }
 
 
@@ -4565,7 +4605,11 @@ a{
     }
 
     .contact__title{
-        padding: 30px 0;
+        padding: 30px 15px;
+    }
+
+    .contact__map iframe{
+        height: 500px;
     }
 
 		.review-form-row50{
@@ -4710,7 +4754,8 @@ a{
     }
 
     .certificate__title h2:before {
-        background: #b2d235;
+        /*background: #b2d235;*/
+        background: #009f28;
     }
 
     .certificate__item{
@@ -4736,18 +4781,24 @@ a{
         padding-bottom: 50px;
     }
 
-    .catalog__title{
-        color: white;
-    }
+    /*.catalog {*/
+    /*    background-image: url("../images/catalog-top-bg.png");*/
+    /*    background-repeat: no-repeat;*/
+    /*    background-size: 100% auto;*/
+    /*}*/
 
-    .catalog__title h2 i:before{
-        background: #036635;
-    }
-
-    .catalog {
+    .catalog-mobile-bg{
         background-image: url("../images/catalog-top-bg.png");
         background-repeat: no-repeat;
         background-size: 100% auto;
+    }
+
+    .catalog-mobile-bg .catalog__title{
+        color: white;
+    }
+
+    .catalog-mobile-bg .catalog__title h2 i:before{
+        background: #036635;
     }
 
 
@@ -4806,6 +4857,10 @@ a{
         background: none;
     }
 
+    .header__inner-right {
+        padding-bottom: 35px;
+    }
+
 }
 
 @media (max-width: 390px) {
@@ -4818,5 +4873,9 @@ a{
 @media (max-width: 360px) {
     .advantage--laboratory .advantage__title {
         font: 19px 'MuseoSansCyrl-300';
+    }
+
+    .header__inner-right {
+        padding-bottom: 25px;
     }
 }

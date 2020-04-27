@@ -234,7 +234,12 @@ $(document).ready(function () {
     });
 
     $(document).on('click', '.contact__tab-name', function (e) {
+        $('.contact__item').removeClass('open');
         $(this).parents().toggleClass('open');
+    });
+
+    $(document).on('click', '.contact__item.open .contact__tab-name', function (e) {
+        $('.contact__item').removeClass('open');
     });
 
     $(document).on('click', '.region-name', function (e) {
@@ -289,21 +294,14 @@ $(document).ready(function () {
         }
     });
 
-
-    $(document).ready(function() {
-        $('.js-example-basic-single').select2({
-            minimumResultsForSearch: -1
-        });
-    });
-
-
     $(document).on('click', '.mobile-menu', function (e) {
 			e.preventDefault();
 		});
 
-
-
-
-
+    if($(document).find('.certificate__categories').length > 0) {
+        $('.js-example-basic-single').select2({
+            minimumResultsForSearch: -1
+        });
+    }
 
 });
