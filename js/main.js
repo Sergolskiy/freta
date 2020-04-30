@@ -255,13 +255,13 @@ $(document).ready(function () {
     });
 
     $(document).on('click', '.popup__close', function (e) {
-        $('.dealers-popup').removeClass('open');
+        $('.popup ').removeClass('open');
         $('body').removeClass('overHid');
     });
 
     $(document).on('click', '.popup', function (e) {
         if(e.target.classList[0] == "popup") {
-            $('.dealers-popup').removeClass('open');
+            $('.popup ').removeClass('open');
             $('body').removeClass('overHid');
         }
     });
@@ -303,5 +303,57 @@ $(document).ready(function () {
             minimumResultsForSearch: -1
         });
     }
+
+    var researchSlide;
+
+    $(document).on('click', '.research__item', function(e){
+        $('body').addClass('overHid');
+        researchSlide = $(this).closest('.owl-item');
+        var item = $(this);
+
+        changeReserchImg(item);
+    });
+
+
+    function changeReserchImg(item){
+
+        setTimeout(function () {
+            var i = 0;
+            $('.research__popup').addClass('open');
+            var img = item.find('.research__img');
+            console.log(item);
+
+            $('.research__popup').find('.research__img').each(function(){
+                var imgSrc = $(img[i]).attr('data-img');
+                $(this).find('img').attr('src', imgSrc);
+                i++;
+            });
+
+        },300)
+
+        setTimeout(function () {
+            $('.research__popup .research__item').removeClass('animation');
+        },600)
+    }
+
+    $(document).on('click', '.research__popup-btn-prev', function(){
+        if (researchSlide.prev().length > 0) {
+            $('.research__popup .research__item').addClass('animation');
+            researchSlide = researchSlide.prev();
+            var newitem = researchSlide.find('.research__item');
+            changeReserchImg(newitem);
+        }
+    });
+
+    $(document).on('click', '.research__popup-btn-next', function(){
+        if (researchSlide.next().length > 0) {
+            $('.research__popup .research__item').addClass('animation');
+            researchSlide = researchSlide.next();
+            var newitem = researchSlide.find('.research__item');
+            changeReserchImg(newitem);
+        }
+    });
+
+
 
 });
